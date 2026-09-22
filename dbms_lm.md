@@ -66,19 +66,6 @@ DROP TABLE clients;
 
 **Output:**
 
-```text
-Table DEPARTMENTS created.
-Table EMPLOYEES created.
-Table PROJECTS created.
-Table CLIENTS created.
-Table ASSIGNMENTS created.
-Table EMPLOYEES altered.
-Table EMPLOYEES altered.
-Table CLIENTS altered.
-Table ASSIGNMENTS truncated.
-Table CLIENTS dropped.
-```
-
 Structure of `EMPLOYEES` Table (after ALTER):
 
 | Column Name | Data Type | Nullable | Primary Key / Constraint |
@@ -135,28 +122,10 @@ UPDATE employees SET email = 'emily.davis@company.com' WHERE emp_id = 104;
 -- DELETE Commands
 DELETE FROM employees WHERE emp_id = 110;
 
--- Commit changes
-COMMIT;
 ```
 
-**Output:**
 
-```text
-1 row created.
-1 row created.
-1 row created.
-1 row created.
-1 row created.
-1 row created.
-1 row created.
-6 rows created.
-4 rows updated.
-1 row updated.
-1 row deleted.
-Commit complete.
-```
-
-`EMPLOYEES` Table Data (Partial representation):
+**Output: **
 
 | EMP_ID | FIRST_NAME | LAST_NAME | HIRE_DATE | SALARY | DEPT_ID | EMAIL |
 |---|---|---|---|---|---|---|
@@ -226,29 +195,15 @@ WHERE email IS NOT NULL;
 
 **Output:**
 
-Query 1 Result (salary > 60000):
+1. **SELECT:** 102-Jane, 106-Sarah, 109-James
+2. **AND:** 106-Sarah, 109-James ,**OR:** 103-Robert, 104-Emily, 105-Michael, 107-David, 108-Laura
+3. **BETWEEN:** 104-Emily, 108-Laura
+4. **IN:** 101-John, 102-Jane, 105-Michael, 106-Sarah, 107-David, 109-James
+5. **LIKE:**  
+   - `S%` → 102-Jane Smith  
+   - `_a%` → 102-Jane, 106-Sarah, 108-Laura, 109-James
+6. **IS NULL:** No rows ,**IS NOT NULL:** 101–109
 
-| EMP_ID | FIRST_NAME | LAST_NAME | SALARY |
-|---|---|---|---|
-| 101 | John | Doe | 66000.00 |
-| 103 | Robert | Johnson | 70000.00 |
-| 106 | Sarah | Wilson | 71500.00 |
-| 109 | James | Thomas | 79200.00 |
-
-Query 3 Result (salary BETWEEN 50000 AND 65000):
-
-| EMP_ID | FIRST_NAME | LAST_NAME | SALARY |
-|---|---|---|---|
-| 102 | Jane | Smith | 60500.00 |
-| 104 | Emily | Davis | 50000.00 |
-| 107 | David | Taylor | 52000.00 |
-| 108 | Laura | Anderson | 58000.00 |
-
-Query 5 Result (last_name LIKE 'S%'):
-
-| EMP_ID | FIRST_NAME | LAST_NAME |
-|---|---|---|
-| 102 | Jane | Smith |
 
 **Conclusion:** The SELECT statement combined with comparison, logical, pattern matching (LIKE), set membership (IN), range (BETWEEN), and NULL test operators was successfully verified.
 
@@ -293,16 +248,16 @@ SELECT TO_CHAR(NEW_TIME(TO_DATE('2026-09-21 12:00:00', 'YYYY-MM-DD HH24:MI:SS'),
 **Output:**
 
 | Function Output Column | Sample Output Value |
-|---|---|
-| SYSDATE | 21-SEP-26 |
-| SIX_MONTHS_LATER | 21-MAR-27 |
-| MONTHS_DIFF | 20.67 |
-| NEXT_MONDAY | 28-SEP-26 |
-| END_OF_MONTH | 30-SEP-26 |
-| ROUNDED_MONTH | 01-OCT-26 |
-| TRUNCATED_YEAR | 01-JAN-26 |
-| MAX_DATE | 31-DEC-26 |
-| CONVERTED_TIME | 2026-09-21 08:00:00 |
+| ---------------------- | ------------------- |
+| SYSDATE                | 21-SEP-26           |
+| SIX_MONTHS_LATER       | 21-MAR-27           |
+| MONTHS_DIFF            | 20.67               |
+| NEXT_MONDAY            | 28-SEP-26           |
+| END_OF_MONTH           | 30-SEP-26           |
+| ROUNDED_MONTH          | 01-OCT-26           |
+| TRUNCATED_YEAR         | 01-JAN-26           |
+| MAX_DATE               | 31-DEC-26           |
+| CONVERTED_TIME         | 2026-09-21 08:00:00 |
 
 **Conclusion:** Built-in Oracle SQL date functions were successfully implemented to perform date manipulations, calculations, and conversions.
 
@@ -449,16 +404,16 @@ GROUP BY dept_id;
 Aggregate Summary:
 
 | TOTAL_EMPLOYEES | EMP_WITH_EMAIL | TOTAL_SALARY_EXPENSE | AVERAGE_SALARY | MINIMUM_SALARY | MAXIMUM_SALARY |
-|---|---|---|---|---|---|
-| 9 | 9 | 567200.00 | 63022.22 | 48000.00 | 79200.00 |
+| --------------- | -------------- | -------------------- | -------------- | -------------- | -------------- |
+| 9               | 9              | 567200.00            | 61688.88...    | 48000.00       | 79200.00       |
 
 Group Summary with DECODE:
 
-| DEPT_ID | DEPT_COUNT | IT_SALARY_TOTAL | HR_SALARY_TOTAL | FIN_SALARY_TOTAL |
-|---|---|---|---|---|
-| 10 | 4 | 277200.00 | 0.00 | 0.00 |
-| 20 | 3 | 0.00 | 178000.00 | 0.00 |
-| 30 | 2 | 0.00 | 0.00 | 100000.00 |
+| DEPT_ID | COUNT | IT SALARY TOTAL | HR SALARY TOTAL | FIN SALARY TOTAL |
+| ------- | ----- | --------------- | --------------- | ---------------- |
+| 30      | 2     | 0               | 0               | 100000           |
+| 20      | 3     | 0               | 178000          | 0                |
+| 10      | 4     | 277200          | 0               | 0                |
 
 **Conclusion:** SQL group (aggregate) functions along with the DECODE function were successfully used to aggregate and summarize dataset records.
 
@@ -494,11 +449,11 @@ ORDER BY average_salary DESC;
 
 Query 1 (GROUP BY & ORDER BY):
 
-| DEPT_ID | TOTAL_EMP | AVG_SAL |
-|---|---|---|
-| 10 | 4 | 69300.00 |
-| 20 | 3 | 59333.33 |
-| 30 | 2 | 50000.00 |
+| DEPT_ID | TOTAL_EMP | AVG_SAL  |
+| ------- | --------- | -------- |
+| 10      | 4         | 69300.00 |
+| 20      | 3         | 59333.33 |
+| 30      | 2         | 50000    |
 
 Query 2 (GROUP BY, HAVING & ORDER BY):
 
