@@ -1,6 +1,6 @@
 # Practical 1
 
-**Aim:** Write a simple "Hello World" java program, compilation, debugging, executing using java compiler and interpreter.**
+**Aim:** Write a simple "Hello World" java program, compilation, debugging, executing using java compiler and interpreter.
 
 **Java Code:**
 
@@ -14,48 +14,46 @@ public class HelloWorld {
 
 **Output:**
 
-```text
+```sh
 Hello, World!
 ```
 
-**Conclusion:**
-In this practical, we learned how to write, compile, and execute a basic Java program using the Java compiler (`javac`) and interpreter (`java`). We gained an understanding of the structure of a Java application, including the main method entry point and basic console output commands.
+**Conclusion:** In this practical, we learned how to write, compile, and execute a basic Java program using the Java compiler (`javac`) and interpreter (`java`). We gained an understanding of the structure of a Java application, including the main method entry point and basic console output commands.
 
 ---
 
 # Practical 2
 
-**Aim:** Write a program using the arithmetic operators to perform algebraic operations on two numbers (+,-,*,/,%).**
+**Aim:** Write a program using the arithmetic operators to perform algebraic operations on two numbers `(+,-,*,/,%)`.
 
 **Java Code:**
 
 ```java
-import java.util.Scanner;
+    import java.util.Scanner;
 
-public class ArithmeticOperations {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public class arithmeticOperators {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter first number: ");
-        int a = scanner.nextInt();
+            System.out.print("Enter first number: ");
+            int a = scanner.nextInt();
 
-        System.out.print("Enter second number: ");
-        int b = scanner.nextInt();
+            System.out.print("Enter second number: ");
+            int b = scanner.nextInt();
 
-        System.out.println("Addition (a `+` b) = " + (a + b));
-        System.out.println("Subtraction (a `-` b) = " + (a - b));
-        System.out.println("Multiplication (a `*` b) = " + (a * b));
-        System.out.println("Division (a `/` b) = " + (a / b));
-        System.out.println("Modulo (a `%` b) = " + (a % b));
-
-        scanner.close();
+            System.out.println("Addition (a + b) = " + (a + b));
+            System.out.println("Subtraction (a - b) = " + (a - b));
+            System.out.println("Multiplication (a * b) = " + (a * b));
+            System.out.println("Division (a / b) = " + (a / b));
+            System.out.println("Modulo (a % b) = " + (a % b));
+            scanner.close();
+        }
     }
-}
 ```
 
 **Output:**
 
-```text
+```sh
 Enter first number: 20
 Enter second number: 6
 Addition (a `+` b) = 26
@@ -65,14 +63,13 @@ Division (a `/` b) = 3
 Modulo (a `%` b) = 2
 ```
 
-**Conclusion:**
-In this practical, we successfully implemented basic arithmetic operators (`+`, `-`, `*`, `/`, `%`) in Java to perform algebraic operations on user-provided inputs. We understood how integer division computes quotients while the modulo operator evaluates the remainder.
+**Conclusion:** In this practical, we successfully implemented basic arithmetic operators (`+`, `-`, `*`, `/`, `%`) in Java to perform algebraic operations on user-provided inputs. We understood how integer division computes quotients while the modulo operator evaluates the remainder.
 
 ---
 
 # Practical 3
 
-**Aim:** Write a java program to print the value of x^n. Input: x=5 Input: n=3 Output: 125**
+**Aim:** Write a java program to print the value of `x^n`. Input: x=5, n=3 Output: 125
 
 **Java Code:**
 
@@ -103,20 +100,19 @@ public class PowerCalculation {
 
 **Output:**
 
-```text
+```sh
 Input x: 5
 Input n: 3
 Output: 125
 ```
 
-**Conclusion:**
-In this practical, we demonstrated power calculation (x^n) in Java using iterative control structures (`for` loop). We learned how to accumulate multiplicative results across iterations to compute exponential values efficiently.
+**Conclusion:** In this practical, we demonstrated power calculation `(x^n)` in Java using iterative control structures (`for` loop). We learned how to accumulate multiplicative results across iterations to compute exponential values efficiently.
 
 ---
 
 # Practical 4
 
-**Aim:** Write a program in Java to find a minimum of three numbers using a conditional operator.**
+**Aim:** Write a program in Java to find a minimum of three numbers using a conditional operator.
 
 **Java Code:**
 
@@ -147,21 +143,20 @@ public class MinThreeNumbers {
 
 **Output:**
 
-```text
+```sh
 Enter first number: 15
 Enter second number: 7
 Enter third number: 12
 Minimum number is: 7
 ```
 
-**Conclusion:**
-In this practical, we explored the usage of nested ternary (conditional) operators (`?:`) to find the minimum of three numbers. We understood how concise conditional expressions simplify decision-making logic without relying on verbose `if-else` blocks.
+**Conclusion:** In this practical, we explored the usage of nested ternary (conditional) operators (`?:`) to find the minimum of three numbers. We understood how concise conditional expressions simplify decision-making logic without relying on verbose `if-else` blocks.
 
 ---
 
 # Practical 5
 
-**Aim:** Write a program to print even numbers up to 10 using a while loop.**
+**Aim:** Write a program to print even numbers up to 10 using a while loop.
 
 **Java Code:**
 
@@ -179,7 +174,7 @@ public class EvenNumbers {
 
 **Output:**
 
-```text
+```sh
 2
 4
 6
@@ -187,14 +182,13 @@ public class EvenNumbers {
 10
 ```
 
-**Conclusion:**
-In this practical, we learned how to utilize the `while` loop construct in Java to iterate and print even numbers sequentially up to 10. We understood loop initialization, condition evaluation, and increment operations.
+**Conclusion:** In this practical, we learned how to utilize the `while` loop construct in Java to iterate and print even numbers sequentially up to 10. We understood loop initialization, condition evaluation, and increment operations.
 
 ---
 
 # Practical 6
 
-**Aim:** Write a Program to print Prime numbers between 1 to 100.**
+**Aim:** Write a Program to print Prime numbers between 1 to 100.
 
 **Java Code:**
 
@@ -220,173 +214,130 @@ public class PrimeNumbers {
 
 **Output:**
 
-```text
+```sh
 Prime numbers between 1 and 100:
-2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
 ```
 
-**Conclusion:**
-In this practical, we implemented nested loop logic and mathematical checks to identify prime numbers between 1 and 100. We learned how to optimize prime testing using `Math.sqrt()` and boolean flags.
+**Conclusion:** In this practical, we implemented nested loop logic and mathematical checks to identify prime numbers between 1 and 100. We learned how to optimize prime testing using `Math.sqrt()` and boolean flags.
 
 ---
 
 # Practical 7
 
-**Aim:** Write a JAVA program to sort the elements of an array in ascending order.**
+**Aim:** Write a JAVA program to sort the elements of an array in ascending order.
 
 **Java Code:**
 
 ```java
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArraySort {
+class test {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter number of elements in array: ");
-        int n = scanner.nextInt();
+        System.out.print("Enter number of elements: ");
+        int n = sc.nextInt();
+
         int[] arr = new int[n];
 
-        System.out.println("Enter " + n + " elements:");
+        System.out.println("Enter elements:");
         for (int i = 0; i < n; i++) {
-            arr[i] = scanner.nextInt();
+            arr[i] = sc.nextInt();
         }
 
-        System.out.println("Original Array: " + Arrays.toString(arr));
-
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - 1 - i; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+        // Sort array in ascending order
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] > arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
                 }
             }
         }
 
-        System.out.println("Sorted Array: " + Arrays.toString(arr));
+        System.out.println("Array in ascending order:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
 
-        scanner.close();
+        sc.close();
     }
 }
 ```
 
 **Output:**
 
-```text
-Enter number of elements in array: 5
-Enter 5 elements:
-45 12 85 32 10
-Original Array: [45, 12, 85, 32, 10]
-Sorted Array: [10, 12, 32, 45, 85]
+```sh
+Enter number of elements: 5
+Enter elements:
+25 35 36 15 25
+Array in ascending order:
+15 25 25 35 36
 ```
 
-**Conclusion:**
-In this practical, we implemented the Bubble Sort algorithm in Java to arrange array elements in ascending order. We gained practical knowledge of array traversal, index comparisons, and value swapping techniques.
+**Conclusion:** In this practical, we implemented the Bubble Sort algorithm in Java to arrange array elements in ascending order. We gained practical knowledge of array traversal, index comparisons, and value swapping techniques.
 
 ---
 
 # Practical 8
 
-**Aim:** Write a program in Java to multiply two matrixes. Declare a class Matrix where 2D array is declared as instance variable and array should be initialized, within class.**
+**Aim:** Write a program in Java to multiply two matrixes. Declare a class Matrix where 2D array is declared as instance variable and array should be initialized, within class.
 
 **Java Code:**
 
 ```java
-import java.util.Scanner;
-
 class Matrix {
-    int[][] data;
-    int rows;
-    int cols;
+    int[][] a = {
+        {1, 2},
+        {3, 4}
+    };
 
-    public Matrix(int rows, int cols) {
-        this.rows = rows;
-        this.cols = cols;
-        this.data = new int[rows][cols];
-    }
+    int[][] b = {
+        {5, 6},
+        {7, 8}
+    };
 
-    public void readMatrix(Scanner scanner) {
-        System.out.println("Enter matrix elements (" + rows + "x" + cols + "):");
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                data[i][j] = scanner.nextInt();
-            }
-        }
-    }
+    public static void main(String[] args) {
+        Matrix m = new Matrix();
 
-    public Matrix multiply(Matrix other) {
-        Matrix result = new Matrix(this.rows, other.cols);
-        for (int i = 0; i < this.rows; i++) {
-            for (int j = 0; j < other.cols; j++) {
-                for (int k = 0; k < this.cols; k++) {
-                    result.data[i][j] += this.data[i][k] * other.data[k][j];
+        int[][] c = new int[2][2];
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                for (int k = 0; k < 2; k++) {
+                    c[i][j] = c[i][j] + m.a[i][k] * m.b[k][j];
                 }
             }
         }
-        return result;
-    }
 
-    public void display() {
-        for (int[] row : data) {
-            for (int val : row) {
-                System.out.print(val + " ");
+        System.out.println("Result:");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(c[i][j] + " ");
             }
             System.out.println();
         }
-    }
-}
-
-public class MatrixMultiplication {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        Matrix m1 = new Matrix(2, 2);
-        Matrix m2 = new Matrix(2, 2);
-
-        System.out.println("--- Matrix 1 ---");
-        m1.readMatrix(scanner);
-
-        System.out.println("--- Matrix 2 ---");
-        m2.readMatrix(scanner);
-
-        Matrix result = m1.multiply(m2);
-
-        System.out.println("Resultant Matrix:");
-        result.display();
-
-        scanner.close();
     }
 }
 ```
 
 **Output:**
 
-```text
---- Matrix 1 ---
-Enter matrix elements (2x2):
-1 2
-3 4
---- Matrix 2 ---
-Enter matrix elements (2x2):
-5 6
-7 8
-Resultant Matrix:
-19 22 
-43 50 
+```sh
+Result:
+19 22
+43 50
 ```
 
-**Conclusion:**
-In this practical, we developed an object-oriented Java program to perform 2D matrix multiplication. We learned object modeling, encapsulation of 2D arrays within classes, constructor initialization, and multi-dimensional loop indexing.
+**Conclusion:** In this practical, we developed an object-oriented Java program to perform 2D matrix multiplication. We learned object modeling, encapsulation of 2D arrays within classes, constructor initialization, and multi-dimensional loop indexing.
 
 ---
 
 # Practical 9
 
-**Aim:** Write a java program to check Armstrong number. Input: 153 Output: Armstrong number Input: 22 Output: not Armstrong number .**
-
-**Java Code:**
+**Aim:** Write a java program to check Armstrong number. Input: 153 Output: Armstrong number Input: 22 Output: not Armstrong number.
 
 ```java
 import java.util.Scanner;
@@ -426,85 +377,77 @@ public class ArmstrongCheck {
 
 **Output:**
 
-```text
+```sh
 Enter a number: 153
-Output: Armstrong number
+Armstrong number
+Enter a number: 22
+Not Armstrong number
 ```
 
-**Conclusion:**
-In this practical, we created a program to verify whether a given integer is an Armstrong number. We understood digit extraction using modulus (`%`) and division (`/`) operators alongside power calculations with `Math.pow()`.
+**Conclusion:** In this practical, we created a program to verify whether a given integer is an Armstrong number. We understood digit extraction using modulus (`%`) and division (`/`) operators alongside power calculations with `Math.pow()`.
 
 ---
 
 # Practical 10
 
-**Aim:** Write programs in Java to use the Wrapper class of each primitive data type.**
+**Aim:** Write programs in Java to use the Wrapper class of each primitive data type.
 
 **Java Code:**
 
 ```java
-import java.util.Scanner;
-
-public class WrapperClassesDemo {
+class test {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter an integer value: ");
-        int primitiveInt = scanner.nextInt();
+        byte b = 10;
+        short s = 20;
+        int i = 30;
+        long l = 40L;
+        float f = 50.5f;
+        double d = 60.5;
+        char c = 'A';
+        boolean bool = true;
 
-        System.out.print("Enter a double value: ");
-        double primitiveDouble = scanner.nextDouble();
+        Byte obj1 = b;
+        Short obj2 = s;
+        Integer obj3 = i;
+        Long obj4 = l;
+        Float obj5 = f;
+        Double obj6 = d;
+        Character obj7 = c;
+        Boolean obj8 = bool;
 
-        // Autoboxing (Primitive to Wrapper Object)
-        Integer intObj = primitiveInt;
-        Double doubleObj = primitiveDouble;
-        Boolean boolObj = true;
-        Character charObj = 'J';
-
-        System.out.println("\n--- Autoboxed Wrapper Objects ---");
-        System.out.println("Integer Object: " + intObj);
-        System.out.println("Double Object: " + doubleObj);
-        System.out.println("Boolean Object: " + boolObj);
-        System.out.println("Character Object: " + charObj);
-
-        // Unboxing (Wrapper Object to Primitive)
-        int unboxedInt = intObj;
-        double unboxedDouble = doubleObj;
-
-        System.out.println("\n--- Unboxed Primitives ---");
-        System.out.println("Unboxed int: " + unboxedInt);
-        System.out.println("Unboxed double: " + unboxedDouble);
-
-        scanner.close();
+        System.out.println("Byte: " + obj1);
+        System.out.println("Short: " + obj2);
+        System.out.println("Integer: " + obj3);
+        System.out.println("Long: " + obj4);
+        System.out.println("Float: " + obj5);
+        System.out.println("Double: " + obj6);
+        System.out.println("Character: " + obj7);
+        System.out.println("Boolean: " + obj8);
     }
 }
 ```
 
 **Output:**
 
-```text
-Enter an integer value: 42
-Enter a double value: 99.99
-
---- Autoboxed Wrapper Objects ---
-Integer Object: 42
-Double Object: 99.99
-Boolean Object: true
-Character Object: J
-
---- Unboxed Primitives ---
-Unboxed int: 42
-Unboxed double: 99.99
+```sh
+Byte: 10
+Short: 20
+Integer: 30
+Long: 40
+Float: 50.5
+Double: 60.5
+Character: A
+Boolean: true
 ```
 
-**Conclusion:**
-In this practical, we demonstrated Java Wrapper classes (`Integer`, `Double`, `Boolean`, `Character`). We learned the mechanisms of Autoboxing (converting primitive types into objects) and Unboxing (extracting primitive values from wrapper objects).
+**Conclusion:** In this practical, we demonstrated the use of Wrapper classes for all primitive data types in Java and understood how primitive values can be represented as objects.
 
 ---
 
 # Practical 11
 
-**Aim:** Write the program for method overloading.**
+**Aim:** Write the program for method overloading.
 
 **Java Code:**
 
@@ -526,33 +469,31 @@ class Calculator {
     }
 }
 
-public class MethodOverloadingDemo {
+public class MethodOverloading {
     public static void main(String[] args) {
         Calculator calc = new Calculator();
-
-        System.out.println("Add 2 integers (10 `+` 20): " + calc.add(10, 20));
-        System.out.println("Add 3 integers (10 `+` 20 `+` 30): " + calc.add(10, 20, 30));
-        System.out.println("Add 2 doubles (5.5 `+` 4.3): " + calc.add(5.5, 4.3));
+            System.out.println("Add 2 integers (10 + 20): " + calc.add(10, 20));
+            System.out.println("Add 3 integers (10 + 20 + 30): " + calc.add(10, 20, 30));
+            System.out.println("Add 2 doubles (5.5 + 4.3): " + calc.add(5.5, 4.3));
     }
 }
 ```
 
 **Output:**
 
-```text
-Add 2 integers (10 `+` 20): 30
-Add 3 integers (10 `+` 20 `+` 30): 60
-Add 2 doubles (5.5 `+` 4.3): 9.8
+```sh
+Add 2 integers (10 + 20): 30
+Add 3 integers (10 + 20 + 30): 60
+Add 2 doubles (5.5 + 4.3): 9.8
 ```
 
-**Conclusion:**
-In this practical, we explored method overloading in Java to achieve compile-time polymorphism. We demonstrated how multiple methods within the same class can share the same name provided their parameter types or counts differ.
+**Conclusion:** In this practical, we explored method overloading in Java to achieve compile-time polymorphism. We demonstrated how multiple methods within the same class can share the same name provided their parameter types or counts differ.
 
 ---
 
 # Practical 12
 
-**Aim:** Consider an employee class, which contains fields such as name and Designation. And a subclass, which contains a field for salary. Write a program to inherit this relation .**
+**Aim:** Consider an employee class, which contains fields such as name and Designation. And a subclass, which contains a field for salary. Write a program to inherit this relation .
 
 **Java Code:**
 
@@ -588,7 +529,7 @@ class SalaryEmployee extends Employee {
     }
 }
 
-public class InheritanceDemo {
+public class Inheritance {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -613,25 +554,24 @@ public class InheritanceDemo {
 
 **Output:**
 
-```text
-Enter Employee Name: Alice Smith
+```sh
+Enter Employee Name: Nick
 Enter Designation: Software Engineer
 Enter Salary: 75000
 
 --- Employee Details ---
-Employee Name: Alice Smith
+Employee Name: Nick
 Designation: Software Engineer
 Salary: $75000.0
 ```
 
-**Conclusion:**
-In this practical, we implemented single inheritance in Java using the `extends` keyword. We learned how a subclass inherits instance variables and methods from a superclass and utilizes `super()` to initialize parent class fields.
+**Conclusion:** In this practical, we implemented single inheritance in Java using the `extends` keyword. We learned how a subclass inherits instance variables and methods from a superclass and utilizes `super()` to initialize parent class fields.
 
 ---
 
 # Practical 13
 
-**Aim:** Create a class "Rectangle" that would contain length and width as an instance variable. Define constructors [constructor overloading (default, parameterized and copy)] to initialize variables of objects. Define methods to find area and to display variables' value of objects which are created.**
+**Aim:** Create a class "Rectangle" that would contain length and width as an instance variable. Define constructors [constructor overloading (default, parameterized and copy)] to initialize variables of objects. Define methods to find area and to display variables' value of objects which are created.\*\*
 
 **Java Code:**
 
@@ -687,7 +627,7 @@ public class RectangleDemo {
 
 **Output:**
 
-```text
+```sh
 --- Default Rectangle ---
 Length: 1.0, Width: 1.0, Area: 1.0
 --- Parameterized Rectangle ---
@@ -696,14 +636,13 @@ Length: 5.0, Width: 3.0, Area: 15.0
 Length: 5.0, Width: 3.0, Area: 15.0
 ```
 
-**Conclusion:**
-In this practical, we demonstrated constructor overloading including default, parameterized, and copy constructors in a `Rectangle` class. We learned how different constructor forms enable flexible object initialization and area calculations.
+**Conclusion:** In this practical, we demonstrated constructor overloading including default, parameterized, and copy constructors in a `Rectangle` class. We learned how different constructor forms enable flexible object initialization and area calculations.
 
 ---
 
 # Practical 14
 
-**Aim:** Create a class "Vehicle" with instance variable vehicle_type. Inherit the class in a class called "Car" with instance model_type, company name etc. display the information of the vehicle by defining the display() in both super and sub class [Method Overriding]**
+**Aim:** Create a class "Vehicle" with instance variable vehicle_type. Inherit the class in a class called "Car" with instance model_type, company name etc. display the information of the vehicle by defining the display() in both super and sub class [Method Overriding].
 
 **Java Code:**
 
@@ -738,7 +677,7 @@ class Car extends Vehicle {
     }
 }
 
-public class MethodOverridingDemo {
+public class MethodOverriding {
     public static void main(String[] args) {
         Car car = new Car("Four-Wheeler", "Sedan", "Toyota");
         car.display();
@@ -748,20 +687,19 @@ public class MethodOverridingDemo {
 
 **Output:**
 
-```text
+```sh
 Vehicle Type: Four-Wheeler
 Company Name: Toyota
 Model Type: Sedan
 ```
 
-**Conclusion:**
-In this practical, we demonstrated method overriding in Java to achieve runtime polymorphism between a `Vehicle` superclass and `Car` subclass. We learned how `@Override` allows a subclass to customize parent class methods while invoking base behavior via `super.display()`.
+**Conclusion:** In this practical, we demonstrated method overriding in Java to achieve runtime polymorphism between a `Vehicle` superclass and `Car` subclass. We learned how `@Override` allows a subclass to customize parent class methods while invoking base behavior via `super.display()`.
 
 ---
 
 # Practical 15
 
-**Aim:** Create a class "Account" containing accountNo, and balance as an instance variable. Derive the Account class into two classes named "Savings" and "Current". The "Savings" class should contain an instance variable named interest Rate, and the "Current" class should contain an instance variable called overdraft Limit. Define appropriate methods for all the classes to enable functionalities to check balance, deposit, and withdraw amounts in Savings and Current accounts. [Ensure that the Account class cannot be instantiated.]**
+**Aim:** Create a class "Account" containing accountNo, and balance as an instance variable. Derive the Account class into two classes named "Savings" and "Current". The "Savings" class should contain an instance variable named interest Rate, and the "Current" class should contain an instance variable called overdraft Limit. Define appropriate methods for all the classes to enable functionalities to check balance, deposit, and withdraw amounts in Savings and Current accounts. [Ensure that the Account class cannot be instantiated.]
 
 **Java Code:**
 
@@ -770,38 +708,38 @@ abstract class Account {
     int accountNo;
     double balance;
 
-    public Account(int accountNo, double balance) {
+    Account(int accountNo, double balance) {
         this.accountNo = accountNo;
         this.balance = balance;
     }
 
-    public void deposit(double amount) {
-        balance += amount;
-        System.out.println("Deposited $" + amount + ". New Balance: $" + balance);
+    void checkBalance() {
+        System.out.println("Account No: " + accountNo);
+        System.out.println("Balance: " + balance);
     }
 
-    public void checkBalance() {
-        System.out.println("Account #" + accountNo + " Balance: $" + balance);
+    void deposit(double amount) {
+        balance = balance + amount;
+        System.out.println("Deposited: " + amount);
     }
 
-    public abstract void withdraw(double amount);
+    abstract void withdraw(double amount);
 }
 
 class Savings extends Account {
     double interestRate;
 
-    public Savings(int accountNo, double balance, double interestRate) {
+    Savings(int accountNo, double balance, double interestRate) {
         super(accountNo, balance);
         this.interestRate = interestRate;
     }
 
-    @Override
-    public void withdraw(double amount) {
-        if (balance >= amount) {
-            balance -= amount;
-            System.out.println("Savings Account Withdrawn: $" + amount + ". Remaining Balance: $" + balance);
+    void withdraw(double amount) {
+        if (amount <= balance) {
+            balance = balance - amount;
+            System.out.println("Withdrawn: " + amount);
         } else {
-            System.out.println("Insufficient funds in Savings Account!");
+            System.out.println("Insufficient balance");
         }
     }
 }
@@ -809,168 +747,185 @@ class Savings extends Account {
 class Current extends Account {
     double overdraftLimit;
 
-    public Current(int accountNo, double balance, double overdraftLimit) {
+    Current(int accountNo, double balance, double overdraftLimit) {
         super(accountNo, balance);
         this.overdraftLimit = overdraftLimit;
     }
 
-    @Override
-    public void withdraw(double amount) {
-        if ((balance + overdraftLimit) >= amount) {
-            balance -= amount;
-            System.out.println("Current Account Withdrawn: $" + amount + ". Remaining Balance: $" + balance);
+    void withdraw(double amount) {
+        if (amount <= balance + overdraftLimit) {
+            balance = balance - amount;
+            System.out.println("Withdrawn: " + amount);
         } else {
-            System.out.println("Exceeded Overdraft Limit in Current Account!");
+            System.out.println("Overdraft limit exceeded");
         }
     }
 }
 
-public class AbstractAccountDemo {
+class Bank {
     public static void main(String[] args) {
-        Savings sa = new Savings(1001, 2000.0, 4.5);
-        Current ca = new Current(2001, 1000.0, 500.0);
 
-        System.out.println("--- Savings Account ---");
-        sa.checkBalance();
-        sa.deposit(500.0);
-        sa.withdraw(1200.0);
+        Savings s = new Savings(101, 10000, 5.0);
 
-        System.out.println("\n--- Current Account ---");
-        ca.checkBalance();
-        ca.withdraw(1300.0);
+        System.out.println("-- Savings Account -- ");
+        s.checkBalance();
+        s.deposit(2000);
+        s.withdraw(3000);
+        s.checkBalance();
+
+        System.out.println();
+
+        Current c = new Current(102, 5000, 3000);
+
+        System.out.println("-- Current Account -- ");
+        c.checkBalance();
+        c.deposit(2000);
+        c.withdraw(9000);
+        c.checkBalance();
     }
 }
 ```
 
 **Output:**
 
-```text
---- Savings Account ---
-Account #1001 Balance: $2000.0
-Deposited $500.0. New Balance: $2500.0
-Savings Account Withdrawn: $1200.0. Remaining Balance: $1300.0
+```sh
+-- Savings Account --
+Account No: 101
+Balance: 10000.0
+Deposited: 2000.0
+Withdrawn: 3000.0
+Account No: 101
+Balance: 9000.0
 
---- Current Account ---
-Account #2001 Balance: $1000.0
-Current Account Withdrawn: $1300.0. Remaining Balance: $-300.0
+-- Current Account --
+Account No: 102
+Balance: 5000.0
+Deposited: 2000.0
+Withdrawn: 9000.0
+Account No: 102
+Balance: -2000.0
 ```
 
-**Conclusion:**
-In this practical, we implemented abstract classes and methods to model a banking `Account` structure with specialized `Savings` and `Current` subclasses. We learned how abstract classes prevent direct instantiation while enforcing concrete withdrawal behaviors.
+**Conclusion:** In this practical, we demonstrated **inheritance and abstraction** by creating an abstract `Account` class and deriving `Savings` and `Current` classes with their respective functionalities for **deposit, withdrawal, and balance checking**.
 
 ---
 
 # Practical 16
 
-**Aim:** Write a program in Java in which a subclass constructor invokes the constructor of the super class and instantiate the values. [ refer class Account and sub classes savingAccount and CurrentAccount in Q 14 for this task]**
+**Aim:** Write a program in Java in which a subclass constructor invokes the constructor of the super class and instantiate the values. [ refer class Account and sub classes savingAccount and CurrentAccount in Q 14 for this task]
 
 **Java Code:**
 
 ```java
-class AccountBase {
+class Account {
     int accountNo;
     double balance;
 
-    public AccountBase(int accountNo, double balance) {
-        this.accountNo = accountNo;
-        this.balance = balance;
-        System.out.println("Superclass AccountBase Constructor Executed.");
-    }
-
-    public void displayAccountInfo() {
-        System.out.println("Account Number: " + accountNo);
-        System.out.println("Account Balance: $" + balance);
+    Account(int no, double bal) {
+        accountNo = no;
+        balance = bal;
     }
 }
 
-class SavingsAccountSub extends AccountBase {
+class SavingAccount extends Account {
     double interestRate;
 
-    public SavingsAccountSub(int accountNo, double balance, double interestRate) {
-        super(accountNo, balance); // Invokes superclass constructor
-        this.interestRate = interestRate;
-        System.out.println("Subclass SavingsAccountSub Constructor Executed.");
+    SavingAccount(int no, double bal, double rate) {
+        super(no, bal);
+        interestRate = rate;
     }
 
-    public void displaySavingsInfo() {
-        displayAccountInfo();
-        System.out.println("Interest Rate: " + interestRate + "%");
+    void display() {
+        System.out.println("Account No: " + accountNo);
+        System.out.println("Balance: " + balance);
+        System.out.println("Interest Rate: " + interestRate);
     }
 }
 
-public class SuperConstructorDemo {
+class CurrentAccount extends Account {
+    double overdraftLimit;
+
+    CurrentAccount(int no, double bal, double limit) {
+        super(no, bal);
+        overdraftLimit = limit;
+    }
+
+    void display() {
+        System.out.println("Account No: " + accountNo);
+        System.out.println("Balance: " + balance);
+        System.out.println("Overdraft Limit: " + overdraftLimit);
+    }
+}
+
+class Main {
     public static void main(String[] args) {
-        SavingsAccountSub acc = new SavingsAccountSub(5001, 4500.0, 5.0);
-        System.out.println("\n--- Account Summary ---");
-        acc.displaySavingsInfo();
+
+        SavingAccount s = new SavingAccount(101, 10000, 5);
+        s.display();
+
+        System.out.println();
+
+        CurrentAccount c = new CurrentAccount(102, 5000, 3000);
+        c.display();
     }
 }
 ```
 
 **Output:**
 
-```text
-Superclass AccountBase Constructor Executed.
-Subclass SavingsAccountSub Constructor Executed.
+```sh
+Account No: 101
+Balance: 10000.0
+Interest Rate: 5.0
 
---- Account Summary ---
-Account Number: 5001
-Account Balance: $4500.0
-Interest Rate: 5.0%
+Account No: 102
+Balance: 5000.0
+Overdraft Limit: 3000.0
 ```
 
-**Conclusion:**
-In this practical, we demonstrated how a subclass constructor invokes its superclass constructor using the `super()` keyword. We observed the constructor execution sequence where parent variables are initialized before subclass extensions are applied.
+**Conclusion:** In this practical, we demonstrated how a **subclass constructor invokes the superclass constructor using** `super()` and initializes the inherited values.
 
 ---
 
 # Practical 17
 
-**Aim:** Write a program in Java to demonstrate use of this keyword. Check whether this can access the Static variables of the class or not.**
+**Aim:** Write a program in Java to demonstrate use of this keyword. Check whether this can access the Static variables of the class or not.
 
 **Java Code:**
 
 ```java
-public class ThisKeywordDemo {
-    int instanceVar;
-    static int staticVar = 100;
+class Student {
+    int rollNo = 101;
+    static String college = "Silver Oak University";
 
-    public ThisKeywordDemo(int instanceVar) {
-        // 'this' resolves variable shadowing between parameter and instance field
-        this.instanceVar = instanceVar;
+    void display() {
+        System.out.println("Roll No: " + this.rollNo);
+        System.out.println("College: " + this.college);
     }
+}
 
-    public void testAccess() {
-        System.out.println("Accessing Instance Variable using 'this': " + this.instanceVar);
-        
-        // Checking access to static variable using 'this'
-        System.out.println("Accessing Static Variable using 'this': " + this.staticVar);
-        System.out.println("Accessing Static Variable using Class Name: " + ThisKeywordDemo.staticVar);
-    }
-
+class Main {
     public static void main(String[] args) {
-        ThisKeywordDemo obj = new ThisKeywordDemo(50);
-        obj.testAccess();
+        Student s = new Student();
+        s.display();
     }
 }
 ```
 
 **Output:**
 
-```text
-Accessing Instance Variable using 'this': 50
-Accessing Static Variable using 'this': 100
-Accessing Static Variable using Class Name: 100
+```sh
+Roll No: 101
+College: Silver Oak University
 ```
 
-**Conclusion:**
-In this practical, we investigated the scope and usage of the `this` keyword in Java. We confirmed that `this` resolves field shadowing and can access both instance variables and static variables of the class.
+**Conclusion:** In this practical, we demonstrated the use of the `**this**` **keyword** to access instance and static variables of a class.
 
 ---
 
 # Practical 18
 
-**Aim:** Write a program in Java to demonstrate the use of 'final' keyword in the field declaration. How it is accessed using the objects.**
+**Aim:** Write a program in Java to demonstrate the use of 'final' keyword in the field declaration. How it is accessed using the objects.
 
 **Java Code:**
 
@@ -1004,7 +959,7 @@ public class FinalKeywordDemo {
 
 **Output:**
 
-```text
+```sh
 Max Speed (Final field): 120
 Product Code (Blank Final field): PROD-99
 Directly accessing final field: 120
@@ -1017,7 +972,7 @@ In this practical, we demonstrated the `final` keyword for declaring constant fi
 
 # Practical 19
 
-**Aim:** Describe abstract class called Shape which has three subclasses say Triangle, Rectangle, and Circle. Define one method area () in the abstract class and override this area () in these three subclasses to calculate for specific objects i.e. area () of Triangle subclass should calculate area of triangle etc. Same for Rectangle and Circle**
+**Aim:** Describe abstract class called Shape which has three subclasses say Triangle, Rectangle, and Circle. Define one method area () in the abstract class and override this area () in these three subclasses to calculate for specific objects i.e. area () of Triangle subclass should calculate area of triangle etc. Same for Rectangle and Circle\*\*
 
 **Java Code:**
 
@@ -1084,7 +1039,7 @@ public class AbstractShapeDemo {
 
 **Output:**
 
-```text
+```sh
 Area of Triangle: 25.0
 Area of Rectangle: 32.0
 Area of Circle: 153.93804002589985
@@ -1097,7 +1052,7 @@ In this practical, we built an abstract `Shape` class with `Triangle`, `Rectangl
 
 # Practical 20
 
-**Aim:** Assume that there are two packages, student and exam. A student package contains Student class and the exam package contains Result class. Write a program that generates mark sheet for students.**
+**Aim:** Assume that there are two packages, student and exam. A student package contains Student class and the exam package contains Result class. Write a program that generates mark sheet for students.\*\*
 
 **Java Code:**
 
@@ -1151,7 +1106,7 @@ public class Result {
 
 **Output:**
 
-```text
+```sh
 ================ MARK SHEET ================
 Roll No    : 101
 Name       : John Doe
@@ -1170,7 +1125,7 @@ In this practical, we implemented cross-package class interaction between `stude
 
 # Practical 21
 
-**Aim:** Write a java program to accept strings to check whether it is in Upper or Lower case. After checking, the case will be reversed.**
+**Aim:** Write a java program to accept strings to check whether it is in Upper or Lower case. After checking, the case will be reversed.\*\*
 
 **Java Code:**
 
@@ -1208,7 +1163,7 @@ public class CaseReverseDemo {
 
 **Output:**
 
-```text
+```sh
 Enter a string: Hello World!
 Original String: Hello World!
 Case Reversed String: hELLO wORLD!
@@ -1221,7 +1176,7 @@ In this practical, we developed a string manipulation program to inspect charact
 
 # Practical 22
 
-**Aim:** Write a program in Java to develop user defined exceptions for 'Divide by Zero' error.**
+**Aim:** Write a program in Java to develop user defined exceptions for 'Divide by Zero' error.\*\*
 
 **Java Code:**
 
@@ -1266,7 +1221,7 @@ public class CustomExceptionDemo {
 
 **Output:**
 
-```text
+```sh
 Enter numerator: 10
 Enter denominator: 0
 Caught Custom Exception: Custom Error: Cannot divide number by zero!
@@ -1279,7 +1234,7 @@ In this practical, we created a custom user-defined exception (`DivideByZeroExce
 
 # Practical 23
 
-**Aim:** Write a program in Java to demonstrate throw, throws, finally, multiple try block and multiple catch exception**
+**Aim:** Write a program in Java to demonstrate throw, throws, finally, multiple try block and multiple catch exception\*\*
 
 **Java Code:**
 
@@ -1312,9 +1267,9 @@ public class ExceptionKeywordsDemo {
             int[] numbers = {10, 20, 30};
             System.out.print("Enter array index to access (0-2): ");
             int idx = scanner.nextInt();
-            
+
             System.out.println("Value at index " + idx + ": " + numbers[idx]);
-            
+
             int divResult = numbers[idx] / idx; // may throw ArithmeticException if idx == 0
             System.out.println("Result of division: " + divResult);
 
@@ -1334,7 +1289,7 @@ public class ExceptionKeywordsDemo {
 
 **Output:**
 
-```text
+```sh
 Enter your age: 16
 Caught in Catch 1: Age must be 18 or above to register!
 Enter array index to access (0-2): 5
@@ -1349,7 +1304,7 @@ In this practical, we demonstrated key Java exception handling keywords (`try`, 
 
 # Practical 24
 
-**Aim:** Write a small application in Java to develop Banking Application in which the user deposits the amount Rs 1000.00 and then start withdrawing of Rs 400.00, Rs 300.00 and it throws exception "Not Sufficient Fund" when user withdraws Rs. 500 there after.**
+**Aim:** Write a small application in Java to develop Banking Application in which the user deposits the amount Rs 1000.00 and then start withdrawing of Rs 400.00, Rs 300.00 and it throws exception "Not Sufficient Fund" when user withdraws Rs. 500 there after.\*\*
 
 **Java Code:**
 
@@ -1395,7 +1350,7 @@ public class BankingApplication {
 
 **Output:**
 
-```text
+```sh
 Account opened with Initial Deposit: Rs 1000.0
 Attempting to withdraw: Rs 400.0
 Withdrawal successful. Remaining Balance: Rs 600.0
@@ -1412,7 +1367,7 @@ In this practical, we built a banking simulation program that enforces custom `N
 
 # Practical 25
 
-**Aim:** Write a java program to implement an interface called Exam with a method Pass (int mark) that returns a boolean. Write another interface called Classify with a method Division (int average) which returns a String. Write a class called Result which implements both Exam and Classify. The Pass method should return true if the mark is greater than or equal to 50 else false. The Division method must return "First" when the parameter average is 60 or more, "Second" when average is 50 or more but below 60, "No division" when average is less than 50.**
+**Aim:** Write a java program to implement an interface called Exam with a method Pass (int mark) that returns a boolean. Write another interface called Classify with a method Division (int average) which returns a String. Write a class called Result which implements both Exam and Classify. The Pass method should return true if the mark is greater than or equal to 50 else false. The Division method must return "First" when the parameter average is 60 or more, "Second" when average is 50 or more but below 60, "No division" when average is less than 50.\*\*
 
 **Java Code:**
 
@@ -1465,7 +1420,7 @@ public class InterfaceDemo {
 
 **Output:**
 
-```text
+```sh
 Mark: 65 | Passed: true
 Average: 62 | Division: First
 
@@ -1480,7 +1435,7 @@ In this practical, we implemented multiple inheritance in Java using the `Exam` 
 
 # Practical 26
 
-**Aim:** Write a Java Program for Multithreading.**
+**Aim:** Write a Java Program for Multithreading.\*\*
 
 **Java Code:**
 
@@ -1516,7 +1471,7 @@ public class MultithreadingDemo {
 
 **Output:**
 
-```text
+```sh
 Starting Concurrent Threads...
 Thread-Alpha - Count: 1
 Thread-Beta - Count: 1
@@ -1537,7 +1492,7 @@ In this practical, we implemented multithreading in Java by extending the `Threa
 
 # Practical 27
 
-**Aim:** Write a java program to implement Generic class Number_1 for both data type int and float in java.**
+**Aim:** Write a java program to implement Generic class Number_1 for both data type int and float in java.\*\*
 
 **Java Code:**
 
@@ -1575,7 +1530,7 @@ public class GenericNumberDemo {
 
 **Output:**
 
-```text
+```sh
 Integer Generic: Value: 5 | Square: 25.0
 Float Generic: Value: 4.5 | Square: 20.25
 ```
@@ -1587,7 +1542,7 @@ In this practical, we created a generic class (`Number_1<T extends Number>`) acc
 
 # Practical 28
 
-**Aim:** Write a Java program to implement a generic class that stores multiple elements of any data type using a Collection Framework (ArrayList). The program should allow adding elements, sorting them using Comparable, and then displaying them. Demonstrate the program with both String and Integer data types.**
+**Aim:** Write a Java program to implement a generic class that stores multiple elements of any data type using a Collection Framework (ArrayList). The program should allow adding elements, sorting them using Comparable, and then displaying them. Demonstrate the program with both String and Integer data types.\*\*
 
 **Java Code:**
 
@@ -1645,7 +1600,7 @@ public class GenericArrayListDemo {
 
 **Output:**
 
-```text
+```sh
 Integer Container before sorting:
 [42, 15, 89, 7]
 Integer Container after sorting:
@@ -1664,7 +1619,7 @@ In this practical, we utilized the Java Collection Framework's `ArrayList` withi
 
 # Practical 29
 
-**Aim:** Write a program for Java Generics class for Sorting operations: 1. Sorting a list according to natural ordering of elements 2. Reversing sort order 3. Sorting a list whose elements of a custom type 4. Sorting a list using a Comparator.**
+**Aim:** Write a program for Java Generics class for Sorting operations: 1. Sorting a list according to natural ordering of elements 2. Reversing sort order 3. Sorting a list whose elements of a custom type 4. Sorting a list using a Comparator.\*\*
 
 **Java Code:**
 
@@ -1733,7 +1688,7 @@ public class SortingGenericsDemo {
 
 **Output:**
 
-```text
+```sh
 1. Natural Order: [Apple, Banana, Orange]
 2. Reverse Order: [Orange, Banana, Apple]
 3. Custom Type Sorted by Marks (Comparable): [Charlie (78), Bob (85), Alice (92)]
@@ -1747,7 +1702,7 @@ In this practical, we implemented various sorting operations using Java Generics
 
 # Practical 30
 
-**Aim:** Write a Java program to demonstrate the use of Date and Calendar classes to extract the current date, year, month, and day. Format the date using the Formatter class with varargs .**
+**Aim:** Write a Java program to demonstrate the use of Date and Calendar classes to extract the current date, year, month, and day. Format the date using the Formatter class with varargs .\*\*
 
 **Java Code:**
 
@@ -1789,7 +1744,7 @@ public class DateCalendarDemo {
 
 **Output:**
 
-```text
+```sh
 Current Date (Date Class): Sat Sep 19 17:45:00 IST 2026
 Extracted Year: 2026
 Extracted Month: 9
