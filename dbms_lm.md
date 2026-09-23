@@ -66,17 +66,23 @@ DROP TABLE clients;
 
 **Output:**
 
-Structure of `EMPLOYEES` Table (after ALTER):
+1. `DEPARTMENTS`, `EMPLOYEES`, `PROJECTS`, `CLIENTS`, and `ASSIGNMENTS` tables were created successfully.
+2. Primary keys and foreign keys were successfully applied.
+3. `EMAIL` was added and `SALARY` was modified in `EMPLOYEES`.
+4. `PHONE_NO` was renamed to `MOBILE_NO` in `CLIENTS`.
+5. `ASSIGNMENTS` was truncated and `CLIENTS` was dropped.
 
-| Column Name | Data Type | Nullable | Primary Key / Constraint |
-|---|---|---|---|
-| EMP_ID | NUMBER(6) | No | Primary Key |
-| FIRST_NAME | VARCHAR2(30) | Yes | None |
-| LAST_NAME | VARCHAR2(30) | No | None |
-| HIRE_DATE | DATE | Yes | Default SYSDATE |
-| SALARY | NUMBER(10,2) | Yes | None |
-| DEPT_ID | NUMBER(4) | Yes | Foreign Key (DEPARTMENTS) |
-| EMAIL | VARCHAR2(100) | Yes | None |
+**The final structure of the `EMPLOYEES` table after ALTER commands is:**
+
+| Column Name | Data Type     | Nullable | Constraint      |
+| ----------- | ------------- | -------- | --------------- |
+| EMP_ID      | NUMBER(6)     | No       | Primary Key     |
+| FIRST_NAME  | VARCHAR2(30)  | Yes      | —               |
+| LAST_NAME   | VARCHAR2(30)  | No       | —               |
+| HIRE_DATE   | DATE          | Yes      | Default SYSDATE |
+| SALARY      | NUMBER(10,2)  | Yes      | —               |
+| DEPT_ID     | NUMBER(4)     | Yes      | Foreign Key     |
+| EMAIL       | VARCHAR2(100) | Yes      | —               |
 
 **Conclusion:** DDL commands (CREATE, ALTER, TRUNCATE, and DROP) were successfully implemented to define, alter, truncate, and remove table structures in Oracle XE.
 
@@ -125,7 +131,7 @@ DELETE FROM employees WHERE emp_id = 110;
 ```
 
 
-**Output: **
+**Output:**
 
 | EMP_ID | FIRST_NAME | LAST_NAME | HIRE_DATE | SALARY | DEPT_ID | EMAIL |
 |---|---|---|---|---|---|---|
@@ -195,14 +201,83 @@ WHERE email IS NOT NULL;
 
 **Output:**
 
-1. **SELECT:** 102-Jane, 106-Sarah, 109-James
-2. **AND:** 106-Sarah, 109-James ,**OR:** 103-Robert, 104-Emily, 105-Michael, 107-David, 108-Laura
-3. **BETWEEN:** 104-Emily, 108-Laura
-4. **IN:** 101-John, 102-Jane, 105-Michael, 106-Sarah, 107-David, 109-James
-5. **LIKE:**  
-   - `S%` → 102-Jane Smith  
-   - `_a%` → 102-Jane, 106-Sarah, 108-Laura, 109-James
-6. **IS NULL:** No rows ,**IS NOT NULL:** 101–109
+**1. Simple SELECT and Relational Operators**
+
+| EMP_ID | FIRST_NAME | LAST_NAME | SALARY |
+| :----- | :--------- | :-------- | :----- |
+| 101    | John       | Doe       | 66000  |
+| 102    | Jane       | Smith     | 60500  |
+| 103    | Robert     | Johnson   | 70000  |
+| 106    | Sarah      | Wilson    | 71500  |
+| 109    | James      | Thomas    | 79200  |
+
+**2. Logical Operators (AND)**
+
+| EMP_ID | FIRST_NAME | LAST_NAME | DEPT_ID | SALARY |
+| :----- | ---------- | --------- | :------ | :----- |
+| 101    | John       | Doe       | 10      | 66000  |
+| 106    | Sarah      | Wilson    | 10      | 71500  |
+| 109    | James      | Thomas    | 10      | 79200  |
+
+**Logical Operators (OR)**
+
+| EMP_ID | FIRST_NAME | LAST_NAME | DEPT_ID |
+| :----- | ---------- | :-------- | :------ |
+| 103    | Robert     | Johnson   | 20      |
+| 104    | Emily      | Davis     | 20      |
+| 105    | Michael    | Brown     | 30      |
+| 107    | David      | Taylor    | 30      |
+| 108    | Laura      | Anderson  | 20      |
+
+**3. BETWEEN ... AND Operator**
+
+| EMP_ID | FIRST_NAME | LAST_NAME | SALARY |
+| :----- | :--------- | :-------- | :----- |
+| 102    | Jane       | Smith     | 60500  |
+| 104    | Emily      | Davis     | 50000  |
+| 107    | David      | Taylor    | 52000  |
+| 108    | Laura      | Anderson  | 58000  |
+
+**4. IN Operator**
+
+| EMP_ID | FIRST_NAME | LAST_NAME | DEPT_ID |
+| :----- | :--------- | :-------- | :------ |
+| 101    | John       | Doe       | 10      |
+| 102    | Jane       | Smith     | 10      |
+| 105    | Michael    | Brown     | 30      |
+| 106    | Sarah      | Wilson    | 10      |
+| 107    | David      | Taylor    | 30      |
+| 109    | James      | Thomas    | 10      |
+
+**5. LIKE Operator (Last Name S%)**
+
+| EMP_ID | FIRST_NAME | LAST_NAME |
+| :----- | :--------- | :-------- |
+| 102    | Jane       | Smith     |
+
+**LIKE Operator (First Name `_a%`)**
+
+| EMP_ID | FIRST_NAME | LAST_NAME |
+| :----- | :--------- | :-------- |
+| 106    | Sarah      | Wilson    |
+| 107    | David      | Taylor    |
+| 108    | Laura      | Anderson  |
+| 109    | James      | Thomas    |
+
+**6. IS NULL Operator:** `no data found`
+
+**IS NOT NULL Operator**
+
+| EMP_ID | FIRST_NAME | LAST_NAME | EMAIL                  |
+| :----- | :--------- | :-------- | :--------------------- |
+| 101    | John       | Doe       | john.doe@company.com   |
+| 102    | Jane       | Smith     | jane.smith@company.com |
+| 103    | Robert     | Johnson   | robert.j@company.com   |
+| 105    | Michael    | Brown     | mbrown@company.com     |
+| 106    | Sarah      | Wilson    | swilson@company.com    |
+| 107    | David      | Taylor    | dtaylor@company.com    |
+| 108    | Laura      | Anderson  | landerson@company.com  |
+| 109    | James      | Thomas    | jthomas@company.com    |
 
 
 **Conclusion:** The SELECT statement combined with comparison, logical, pattern matching (LIKE), set membership (IN), range (BETWEEN), and NULL test operators was successfully verified.
@@ -218,46 +293,55 @@ WHERE email IS NOT NULL;
 **Code:**
 
 ```sql
--- Date Functions Demonstration using DUAL and EMPLOYEES tables
+-- 1. ADD_MONTHS
+SELECT SYSDATE AS current_date,
+       ADD_MONTHS(SYSDATE, 6) AS after_6_months
+FROM dual;
 
--- 1. ADD_MONTHS: Adding 6 months to current date
-SELECT SYSDATE, ADD_MONTHS(SYSDATE, 6) AS six_months_later FROM DUAL;
+-- 2. MONTHS_BETWEEN
+SELECT SYSDATE AS current_date,
+       ADD_MONTHS(SYSDATE, 6) AS future_date,
+       MONTHS_BETWEEN(ADD_MONTHS(SYSDATE, 6), SYSDATE) AS months_between
+FROM dual;
 
--- 2. MONTHS_BETWEEN: Calculating months difference between two dates
-SELECT MONTHS_BETWEEN(SYSDATE, TO_DATE('2025-01-01', 'YYYY-MM-DD')) AS months_diff FROM DUAL;
+-- 3. ROUND
+SELECT SYSDATE AS current_date,
+       ROUND(SYSDATE, 'YEAR') AS rounded_year
+FROM dual;
 
--- 3. NEXT_DAY: Finding the date of the next specified weekday
-SELECT SYSDATE, NEXT_DAY(SYSDATE, 'MONDAY') AS next_monday FROM DUAL;
+-- 4. NEXT_DAY
+SELECT SYSDATE AS current_date,
+       NEXT_DAY(SYSDATE, 'MONDAY') AS next_monday
+FROM dual;
 
--- 4. LAST_DAY: Finding the last day of the current month
-SELECT SYSDATE, LAST_DAY(SYSDATE) AS end_of_month FROM DUAL;
+-- 5. TRUNC
+SELECT SYSDATE AS current_date,
+       TRUNC(SYSDATE, 'YEAR') AS year_start
+FROM dual;
 
--- 5. ROUND and TRUNC on Dates
-SELECT SYSDATE, 
-       ROUND(SYSDATE, 'MONTH') AS rounded_month, 
-       TRUNC(SYSDATE, 'YEAR') AS truncated_year 
-FROM DUAL;
+-- 6. GREATEST
+SELECT GREATEST(SYSDATE, ADD_MONTHS(SYSDATE, 6)) AS greatest_date
+FROM dual;
 
--- 6. GREATEST and LEAST with Dates
-SELECT GREATEST(TO_DATE('2026-01-01', 'YYYY-MM-DD'), TO_DATE('2026-12-31', 'YYYY-MM-DD')) AS max_date FROM DUAL;
-
--- 7. NEW_TIME: Converting time between time zones (AST to PST)
-SELECT TO_CHAR(NEW_TIME(TO_DATE('2026-09-21 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AST', 'PST'), 'YYYY-MM-DD HH24:MI:SS') AS converted_time FROM DUAL;
+-- 7. NEW_TIME
+SELECT SYSDATE AS GMT_TIME,
+       NEW_TIME(SYSDATE, 'GMT', 'IST') AS IST_TIME
+FROM dual;
 ```
 
 **Output:**
 
 | Function Output Column | Sample Output Value |
 | ---------------------- | ------------------- |
-| SYSDATE                | 21-SEP-26           |
-| SIX_MONTHS_LATER       | 21-MAR-27           |
-| MONTHS_DIFF            | 20.67               |
+| SYSDATE                | 23-SEP-26           |
+| SIX_MONTHS_LATER       | 23-MAR-27           |
+| MONTHS_DIFF            | 6                   |
 | NEXT_MONDAY            | 28-SEP-26           |
 | END_OF_MONTH           | 30-SEP-26           |
 | ROUNDED_MONTH          | 01-OCT-26           |
 | TRUNCATED_YEAR         | 01-JAN-26           |
-| MAX_DATE               | 31-DEC-26           |
-| CONVERTED_TIME         | 2026-09-21 08:00:00 |
+| MAX_DATE               | 23-MAR-27           |
+| CONVERTED_TIME         | 23-SEP-26           |
 
 **Conclusion:** Built-in Oracle SQL date functions were successfully implemented to perform date manipulations, calculations, and conversions.
 
@@ -296,18 +380,28 @@ FROM DUAL;
 
 **Output:**
 
-Numeric Operations Result Set 1:
+**1. Comprehensive Numeric Functions Output**
 
-| ABS_VAL | CEIL_VAL | FLOOR_VAL | COS_VAL | COSH_VAL | EXP_VAL | POWER_VAL | MOD_VAL | SQRT_VAL |
-|---|---|---|---|---|---|---|---|---|
-| 45.75 | 15 | 14 | 1 | 1 | 7.389056 | 32 | 2 | 8 |
+| Function    | Output      |
+| ----------- | :---------- |
+| ABS(-45.75) | 45.75       |
+| CEIL(14.2)  | 15          |
+| FLOOR(14.8) | 14          |
+| COS(0)      | 1           |
+| COSH(0)     | 1           |
+| EXP(2)      | 7.389056099 |
+| POWER(2, 5) | 32          |
+| MOD(17, 5)  | 2           |
+| SQRT(64)    | 8           |
 
-Numeric Operations Result Set 2 (Rounding & Truncation):
+**2. ROUND and TRUNC Output**
 
-| ROUND_2DEC | ROUND_TENS | TRUNC_2DEC | TRUNC_ZERO |
-|---|---|---|---|
-| 125.68 | 130 | 125.67 | 125 |
-
+| Function           | Output |
+| ------------------ | :----- |
+| ROUND(125.678, 2)  | 125.68 |
+| ROUND(125.678, -1) | 130    |
+| TRUNC(125.678, 2)  | 125.67 |
+| TRUNC(125.678, 0)  | 125    |
 **Conclusion:** Oracle SQL numeric functions were tested and validated for performing mathematical calculations and precision handling.
 
 ---
@@ -323,9 +417,9 @@ Numeric Operations Result Set 2 (Rounding & Truncation):
 ```sql
 -- String Case Conversion Functions
 SELECT 
-    INITCAP('oracle database xe') AS initcap_str,
-    LOWER('DATABASE SYSTEMS') AS lower_str,
-    UPPER('pl/sql practical') AS upper_str
+    INITCAP('silver oak university') AS initcap_str,
+    LOWER('SILVER OAK UNIVERSITY') AS lower_str,
+    UPPER('silver oak university') AS upper_str
 FROM DUAL;
 
 -- Trimming and Padding Functions
@@ -338,7 +432,7 @@ FROM DUAL;
 
 -- String Substring, Translation, and Replacement Functions
 SELECT 
-    SUBSTR('Oracle XE Practical', 1, 6) AS substr_str,
+    SUBSTR('Silver Oak University', 1, 6) AS substr_str,
     REPLACE('Welcome to Java', 'Java', 'Oracle SQL') AS replace_str,
     TRANSLATE('12345 Hello', '12345', 'ABCDE') AS translate_str,
     LENGTH('Oracle Database') AS str_len
@@ -346,24 +440,23 @@ FROM DUAL;
 ```
 
 **Output:**
-
-Case Conversions:
+**1. String Case Conversion Functions**
 
 | INITCAP_STR | LOWER_STR | UPPER_STR |
 |---|---|---|
-| Oracle Database Xe | database systems | PL/SQL PRACTICAL |
+| Silver Oak University | silver oak university | SILVER OAK UNIVERSITY |
 
-Padding and Trimming:
+**2. Trimming and Padding Functions**
 
 | LTRIM_STR | RTRIM_STR | LPAD_STR | RPAD_STR |
 |---|---|---|---|
 | Oracle | Database | *****SQL | SQL##### |
 
-Substring, Replace, Translate & Length:
+**3. String Substring, Translation, and Replacement Functions**
 
-| SUBSTR_STR | REPLACE_STR | TRANSLATE_STR | STR_LEN |
-|---|---|---|---|
-| Oracle | Welcome to Oracle SQL | ABCDE Hello | 15 |
+| SUBSTR_STR | REPLACE_STR           | TRANSLATE_STR | STR_LEN |
+| ---------- | --------------------- | ------------- | ------: |
+| Silver     | Welcome to Oracle SQL | ABCDE Hello   |      15 |
 
 **Conclusion:** Character and string manipulation functions in Oracle SQL were successfully executed and formatted.
 
@@ -400,20 +493,23 @@ GROUP BY dept_id;
 ```
 
 **Output:**
+**1. Aggregate Group Functions Output**
 
-Aggregate Summary:
+| Function             | Output |
+| :------------------- | :----- |
+| TOTAL_EMPLOYEES      | 9      |
+| TOTAL_SALARY_EXPENSE | 555200 |
+| AVERAGE_SALARY       | 61689  |
+| MINIMUM_SALARY       | 48000  |
+| MAXIMUM_SALARY       | 79200  |
 
-| TOTAL_EMPLOYEES | EMP_WITH_EMAIL | TOTAL_SALARY_EXPENSE | AVERAGE_SALARY | MINIMUM_SALARY | MAXIMUM_SALARY |
-| --------------- | -------------- | -------------------- | -------------- | -------------- | -------------- |
-| 9               | 9              | 567200.00            | 61688.88...    | 48000.00       | 79200.00       |
+**2. DECODE Conditional Evaluation Output**
 
-Group Summary with DECODE:
-
-| DEPT_ID | COUNT | IT SALARY TOTAL | HR SALARY TOTAL | FIN SALARY TOTAL |
-| ------- | ----- | --------------- | --------------- | ---------------- |
-| 30      | 2     | 0               | 0               | 100000           |
-| 20      | 3     | 0               | 178000          | 0                |
-| 10      | 4     | 277200          | 0               | 0                |
+| DEPT_ID | DEPT_COUNT | IT_SALARY_TOTAL | HR_SALARY_TOTAL | FIN_SALARY_TOTAL |
+| ------: | ---------: | --------------: | --------------: | ---------------: |
+|      30 |          2 |               0 |               0 |           100000 |
+|      20 |          3 |               0 |          178000 |                0 |
+|      10 |          4 |          277200 |               0 |                0 |
 
 **Conclusion:** SQL group (aggregate) functions along with the DECODE function were successfully used to aggregate and summarize dataset records.
 
@@ -428,17 +524,24 @@ Group Summary with DECODE:
 **Code:**
 
 ```sql
--- 1. Grouping data by department and calculating aggregates
-SELECT dept_id, COUNT(*) AS total_emp, AVG(salary) AS avg_sal
+-- 1. GROUP BY
+SELECT dept_id, COUNT(*) AS employee_count
+FROM employees
+GROUP BY dept_id;
+
+-- 2. HAVING
+SELECT dept_id, MAX(salary) AS highest_salary
 FROM employees
 GROUP BY dept_id
-ORDER BY dept_id ASC;
+HAVING MAX(salary) > 65000;
 
--- 2. Filtering grouped data using HAVING clause and sorting with ORDER BY
-SELECT 
-    dept_id, 
-    COUNT(*) AS emp_count, 
-    ROUND(AVG(salary), 2) AS average_salary
+-- 3. ORDER BY
+SELECT first_name, salary
+FROM employees
+ORDER BY salary DESC;
+
+-- 4. GROUP BY with HAVING and ORDER BY
+SELECT dept_id, AVG(salary) AS average_salary
 FROM employees
 GROUP BY dept_id
 HAVING AVG(salary) > 55000
@@ -446,23 +549,43 @@ ORDER BY average_salary DESC;
 ```
 
 **Output:**
+**1. GROUP BY**
 
-Query 1 (GROUP BY & ORDER BY):
+| DEPT_ID | EMPLOYEE_COUNT |
+| :------ | :------------- |
+| 10      | 4              |
+| 20      | 3              |
+| 30      | 2              |
 
-| DEPT_ID | TOTAL_EMP | AVG_SAL  |
-| ------- | --------- | -------- |
-| 10      | 4         | 69300.00 |
-| 20      | 3         | 59333.33 |
-| 30      | 2         | 50000    |
+**2. HAVING**
 
-Query 2 (GROUP BY, HAVING & ORDER BY):
+| DEPT_ID | HIGHEST_SALARY |
+| :------ | :------------- |
+| 10      | 79200          |
+| 20      | 70000          |
 
-| DEPT_ID | EMP_COUNT | AVERAGE_SALARY |
-|---|---|---|
-| 10 | 4 | 69300.00 |
-| 20 | 3 | 59333.33 |
+**3. ORDER BY**
 
-**Conclusion:** The GROUP BY, HAVING, and ORDER BY clauses were successfully applied to group rows, filter aggregated records, and sort final results.
+| FIRST_NAME | SALARY |
+| :--------- | :----- |
+| James      | 79200  |
+| Sarah      | 71500  |
+| Robert     | 70000  |
+| John       | 66000  |
+| Jane       | 60500  |
+| Laura      | 58000  |
+| David      | 52000  |
+| Emily      | 50000  |
+| Michael    | 48000  |
+
+**4. GROUP BY, HAVING and ORDER BY**
+
+| DEPT_ID | AVERAGE_SALARY |
+| :------ | :------------- |
+| 10      | 69300          |
+| 20      | 59333.33       |
+
+**Conclusion:** The GROUP BY, HAVING, and ORDER BY clauses were successfully implemented to group, filter, and sort the SQL query results.
 
 ---
 
